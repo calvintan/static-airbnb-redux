@@ -1,10 +1,10 @@
-import flats from '../flats';
-
 export function setFlats() {
-  // TODO: Api call! For now, simulate a DB
+  const promise = fetch('https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/flats.json')
+    .then(res => res.json());
+
   return {
     type: 'SET_FLATS',
-    payload: flats
+    payload: promise
   };
 }
 
