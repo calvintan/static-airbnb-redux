@@ -10,9 +10,11 @@ import App from "./components/app";
 
 // Reducers
 import flatsReducer from "./reducers/flats_reducer";
+import selectedFlatReducer from "./reducers/selected_flat_reducer";
 
 const reducers = combineReducers({
-  flats: flatsReducer
+  flats: flatsReducer,
+  selectedFlat: selectedFlatReducer
 });
 
 const root = document.getElementById('root');

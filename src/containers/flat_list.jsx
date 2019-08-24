@@ -3,7 +3,7 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { setFlats } from '../actions';
 
-import Flat from '../components/flat';
+import Flat from './flat';
 
 class FlatList extends Component {
   componentWillMount() {
@@ -15,7 +15,12 @@ class FlatList extends Component {
     return (
       <div className="flat-list col-sm-7">
         {this.props.flats.map((flat) => {
-          return <Flat flat={flat} key={flat.name} />
+          return (
+            <Flat
+              flat={flat}
+              key={flat.name}
+            />
+          );
         })}
       </div>
     );
